@@ -8,8 +8,8 @@ Clone the repo, make the scripts (fuck-uceprotect.py and fuck-uceprotect.sh) exe
 Setup your user's crontab to run the script every 24 hours and at reboot:
 `crontab -e -u fuce`
 ```cron
-0 0 * * * /usr/bin/fuck-uceprotect.sh
-@reboot /usr/bin/fuck-uceprotect.sh
+0 0 * * * sudo /usr/bin/fuck-uceprotect.sh
+@reboot sudo /usr/bin/fuck-uceprotect.sh
 ```
 I recommend you running the script from a separate user account with limited sudo priveleges to the script and iptables. I tried my best on not spamming your iptables rules, mileage may vary.
 
