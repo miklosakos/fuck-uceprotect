@@ -1,5 +1,5 @@
 #!/bin/bash
-SCRIPTLOC="/home/miklos_akos"
+SCRIPTLOC="/usr/bin"
 IPTABLES=$(which iptables)
 GREP=$(which grep)
 LSTFILE="/tmp/processed.lst"
