@@ -5,7 +5,8 @@
 fuck-uceprotect requires requests and Python 3.x.
 Installation:
 Clone the repo, make the scripts (fuck-uceprotect.py and fuck-uceprotect.sh) executable.
-Setup your crontab to run the script every 24 hours and at reboot:
+Setup your user's crontab to run the script every 24 hours and at reboot:
+`crontab -e -u fuce`
 ```cron
 0 0 * * * /usr/bin/fuck-uceprotect.sh
 @reboot /usr/bin/fuck-uceprotect.sh
