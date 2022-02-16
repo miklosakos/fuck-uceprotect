@@ -21,7 +21,8 @@ fuce ALL=NOPASSWD: /usr/bin/fuck-uceprotect.py
 
 `/etc/postfix/main.cf`
 ```
-smtpd_sender_restrictions = ... hash:/opt/fuck-uceprotect/disallowed_senders ...
+smtpd_sender_restrictions = ... hash:/opt/fuck-uceprotect/senders ...
+smtpd_recipient_restrictions = ... hash:/opt/fuck-uceprotect/recipients ...
 ```
 
 If you are an ISP feel free to clone the repo, use it as you wish, modify the script, I don't care. Just make sure your customers don't hit ANY spam traps operated by this "organiztion". Integration to any system should be easy (hopefully).
