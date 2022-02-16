@@ -17,12 +17,13 @@ Example setup:
 `/etc/sudoers.d/fuck-uceprotect`
 ```
 fuce ALL=NOPASSWD: /usr/bin/fuck-uceprotect.py
+fuce ALL=NOPASSWD: /usr/sbin/postmap
 ```
 
 `/etc/postfix/main.cf`
 ```
-smtpd_sender_restrictions = ... hash:/opt/fuck-uceprotect/senders ...
-smtpd_recipient_restrictions = ... hash:/opt/fuck-uceprotect/recipients ...
+smtpd_sender_restrictions = ... hash:/etc/postfix/fuck-uceprotect/senders ...
+smtpd_recipient_restrictions = ... hash:/etc/postfix/fuck-uceprotect/recipients ...
 ```
 
 If you are an ISP feel free to clone the repo, use it as you wish, modify the script, I don't care. Just make sure your customers don't hit ANY spam traps operated by this "organiztion". Integration to any system should be easy (hopefully).

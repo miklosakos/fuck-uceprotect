@@ -59,4 +59,6 @@ with open(postfix_restricted_recipients,'w') as recipients:
         #recipients.write("@%s.* REJECT Sorry, this mail server has been configured to NOT deliver emails to UCEProtect \"protected\" recipients. We apologize for the inconvenience. Try to reach your recipient through other means and notify them that they will never see a response from your mailbox. We are not willing to pay for an extortion \"organization\"'s ransom.\n" % domain)
         recipients.write("{}.* REJECT 550 {}\n".format(domain, postfix_recipient_bounce_message))
 
+os.system('postmap hash:{}'.format(postfix_restricted_senders))
+os.system('postmap hash:{}'.format(postfix_restricted_recipients))
 os.remove(knownlst)
